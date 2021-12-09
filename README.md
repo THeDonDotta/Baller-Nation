@@ -55,7 +55,7 @@ _**Baller Nation** this app is built for sports fans. It is a forum that provide
 
 #### Wireframes
 
-![https://www.figma.com/file/D5TDc8yEkYPxBVpHGoSSIm/Baller-central-(Copy)?node-id=0%3A1](url)
+![](https://www.figma.com/file/D5TDc8yEkYPxBVpHGoSSIm/Baller-central-(Copy)?node-id=0%3A1)
 
 
 #### Component Tree
@@ -122,7 +122,9 @@ src
 
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+- add users and verification
+- add individual sections for each team
+- add ability to use pictures and videos in posts on the feed
 
 ***
 
