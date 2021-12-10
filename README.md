@@ -79,6 +79,8 @@ src
       |__ liveStandings.js
       |__ footer.js
       |__ teamImages.js
+      |__ tickets.js
+      |__ mvp.js
       
 |__ services/
       |__ apiConfig.js
