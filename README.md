@@ -115,7 +115,7 @@ src
 #### ERD Model
 
 
-[ERD Sample](https://lucid.app/lucidchart/3e270027-71ba-43ea-8b16-a3980276dd18/edit?invitationId=inv_31c43e2f-2b00-4575-af96-60ae4866b4bf)
+[ERD Sample](https://imgur.com/gA0I5zE)
 <br>
 
 ***
