@@ -125,6 +125,7 @@ src
 - add users and verification
 - add individual sections for each team
 - add ability to use pictures and videos in posts on the feed
+- add detailed stats of league leaders
 
 ***
 
