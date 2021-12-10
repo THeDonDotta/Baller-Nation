@@ -6,6 +6,10 @@ class CommentsController < ApplicationController
 
     render json: @comments
   end
+
+  def destroy
+    @comments.destroy
+  end
   # POST /comments
   def create
     @comment = Comment.new(comment_params)
