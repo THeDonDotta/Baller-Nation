@@ -55,12 +55,11 @@ _**Baller Nation** this app is built for sports fans. It is a forum that provide
 
 #### Wireframes
 
-![https://www.figma.com/file/D5TDc8yEkYPxBVpHGoSSIm/Baller-central-(Copy)?node-id=0%3A1](https://www.figma.com/file/D5TDc8yEkYPxBVpHGoSSIm/Baller-central-(Copy)?node-id=0%3A1)
+![wireframes](https://www.figma.com/file/D5TDc8yEkYPxBVpHGoSSIm/Baller-central-(Copy)?node-id=0%3A1)
 
 
 #### Component Tree
 
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. Include a link to your component tree
 
 [Component Tree](https://app.diagrams.net/#G1nFlXT6LGpE6D_wnoA0W-7QxJ0IoGhcPl)
 
