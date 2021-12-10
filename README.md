@@ -98,7 +98,6 @@ src
 
 #### Time Estimates
 
-> Use this section to estimate the time necessary to build out each of the components you've described above.
 
 | Task                | Priority | Estimated Time | Time Invested | 
 | ------------------- | :------: | :------------: | :-----------: | 
@@ -115,7 +114,6 @@ src
 
 #### ERD Model
 
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
 
 [ERD Sample](https://lucid.app/lucidchart/3e270027-71ba-43ea-8b16-a3980276dd18/edit?page=0_0&invitationId=inv_31c43e2f-2b00-4575-af96-60ae4866b4bf#)
 <br>
