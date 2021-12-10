@@ -1,12 +1,12 @@
-import { Link } from 'react-router-dom';
+import { Link, Route, Switch} from 'react-router-dom';
 import './App.css';
+import Home from './screens/Home'
 
 function App() {
   return (
     <div className="App">
-      <Link to= '/home'>
-      <button>enter</button>
-      </Link>
+        <Home/>
+
     </div>
   );
 }
