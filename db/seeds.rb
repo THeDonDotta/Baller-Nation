@@ -9,8 +9,13 @@ Post.destroy_all
 Comment.destroy_all
 
 Post.create!(post: 'The 76ers are the best team in the league', image:'https://imgur.com/MOP5vwM')
+Post.create!(post: 'boom', image:'https://imgur.com/MOP5vwM')
+Post.create!(post: 'Ja is the best', image:'https://imgur.com/MOP5vwM')
+Post.create!(post: 'Bing Bong', image:'https://imgur.com/MOP5vwM')
 
-10.times do 
-    Comment.create!(comment: Faker::Lorem.unique, post: 'The 76ers are the best team in the league')
-end
+# 10.times do 
+#     Comment.create!(:post_id: 1, comment: Faker::Lorem.unique)
+# end
+
+Comment.create!(post: Post.last, comment: 'test' )
 
