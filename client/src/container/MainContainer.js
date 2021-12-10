@@ -1,9 +1,12 @@
 import {useState, useEffect} from 'react'
 import {getAllPosts, postPost} from '../services/post'
+import { getAllComments} from '../services/comments'
 import Feed from '../components/feed'
 
 function MainContainer() {
     const [posts, setPosts] = useState([])
+    const [comments, setComments] = useState([])
+
 
     useEffect(() => {
         const fetchPosts = async () => {
@@ -13,10 +16,19 @@ function MainContainer() {
         fetchPosts();
       }, []);
 
+      useEffect(() => {
+        const fetchComments = async () => {
+          const postcomment = await getAllComments();
+          setComments(postcomment);
+        };
+        fetchComments();
+      }, []);
+
     return (
         <div>
             <Feed 
-            posts = {posts}
+            feedposts = {posts}
+            comments = {comments}
             />
         </div>
     )

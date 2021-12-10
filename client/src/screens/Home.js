@@ -7,7 +7,7 @@ import {Switch, Route} from 'react-router-dom'
 function Home() {
     return (
         <div>
-                <Feed />
+                <MainContainer />
         </div>
     )
 }
