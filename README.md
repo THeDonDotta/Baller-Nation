@@ -62,7 +62,7 @@ https://www.figma.com/file/D5TDc8yEkYPxBVpHGoSSIm/Baller-central-(Copy)?node-id=
 #### Component Tree
 
 
-[Component Tree](https://lucid.app/lucidchart/3e270027-71ba-43ea-8b16-a3980276dd18/edit?invitationId=inv_31c43e2f-2b00-4575-af96-60ae4866b4bf)
+[Component Tree](https://drive.google.com/file/d/1nFlXT6LGpE6D_wnoA0W-7QxJ0IoGhcPl/view?usp=sharing)
 
 #### Component Architecture
 
