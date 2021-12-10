@@ -99,10 +99,10 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | 
 | ------------------- | :------: | :------------: | :-----------: | 
-| Add game scores    |    M     |     4 hrs      |     NA hrs     |  
+| Add game scores/standings   |    M     |     8 hrs      |     NA hrs     |  
 | Create CRUD Actions |    H     |     10 hrs      |     NA hrs     |   
-| styling             |   M      |      10 hrs    |     NA hrs      |
-| TOTAL               |          |     24 hrs      |     NA hrs     | 
+| styling             |   M      |      5 hrs    |     NA hrs      |
+| TOTAL               |          |     23 hrs      |     NA hrs     | 
 
 
 
