@@ -46,7 +46,7 @@ _**Baller Nation** this app is built for sports fans. It is a forum that provide
 | :--------------: | :----------------------------------------- |
 |      React       | Front end |
 |   Material UI    | for styling |
-|   mysportsfeeds  | 3rd party api for NBA data |
+|   rapidAPI  | 3rd party api for NBA data |
 |   Ruby on rails  | backend |
 
 <br>
