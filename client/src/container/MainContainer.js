@@ -14,8 +14,8 @@ function MainContainer() {
           setPosts(postfeed);
         };
         fetchPosts();
-      }, []);
-
+      }, [] );
+    console.log(posts)
       useEffect(() => {
         const fetchComments = async () => {
           const postcomment = await getAllComments();

@@ -6,14 +6,16 @@ function Feed({feedposts, comments}) {
 
     return (
         <div>
-            <h1>hi</h1>
-            {feedposts?.map((post) => (
+            
+            {feedposts?.map((post, index) => (
+                <div>
                 <p>{post.post}</p>
+                </div>
             ))}
 
-            {comments?.map((comment) => (
+            {/* {comments?.map((comment) => (
                 <p>{comment.comment}</p>
-            ))}
+            ))} */}
             
         </div>
     )
