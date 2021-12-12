@@ -4,7 +4,7 @@ import {getAllPosts, postPost} from '../services/post'
 import { getAllComments} from '../services/comments'
 import Feed from '../components/feed'
 import Layout from '../layout/Layout'
-
+import PostDetail from '../screens/PostDetail'
 
 function MainContainer() {
     const [posts, setPosts] = useState([])
