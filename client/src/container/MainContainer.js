@@ -44,6 +44,9 @@ function MainContainer() {
                     comments = {comments}
                     />
                 </Route>
+                    <Route path='/posts/:id'>
+                <PostDetail comments={comments}  />
+                </Route>
             </Switch>
         </div>
     )

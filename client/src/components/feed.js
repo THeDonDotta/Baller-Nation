@@ -11,13 +11,11 @@ function Feed({feedposts, comments}) {
             {feedposts?.map((post, index) => (
                 <div>
                 <p>{post.post}</p>
+                
                 </div>
+                
+                
             ))}
-
-            {/* {comments?.map((comment) => (
-                <p>{comment.comment}</p>
-            ))} */}
-            
         </div>
     )
 }
