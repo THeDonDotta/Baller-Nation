@@ -39,9 +39,9 @@ function PostDetail({comments}) {
 
         <select onChange={handleChange} defaultValue='default'>
 
-            <option disabled value='default'>
+            {/* <option disabled value='default'>
             -- Select a comment --
-            </option>
+            </option> */}
 
             {comments.map((c) => (
             
