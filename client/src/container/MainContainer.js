@@ -43,9 +43,6 @@ function MainContainer() {
             <Layout/>
             <Switch>
                 <Route exact path="/home">
-                    <PostCreate 
-                    handlePostCreate = {handlePostCreate}
-                    />
                     <Feed 
                     feedposts = {posts}
                     comments = {comments}

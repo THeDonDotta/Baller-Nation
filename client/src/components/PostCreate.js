@@ -4,26 +4,30 @@ import { Redirect } from 'react-router-dom'
 import Post from '../screens/Post';
 
 export default function PostCreate({ handlePostCreate }) {
+    
     const [post, setPost] = useState({
     post: "",
+    image: "",
     });
 
+    const [isCreated, setCreated] = useState(false)
 
     const handleChange = (e) => {
-    const { post, value } = e.target;
-    setPost({ 
-        ...Post,
-        [post]: value,
-    })
+    const { name, value } = e.target;
+        setPost((prevState) => ({
+            ...prevState,
+            [name]: value,
+        }))
+
     };
 
     const handleSubmit = async (event) => {
         event.preventDefault();
         const created = await postPost(post);
-        
+        setCreated({ created });
     };
-    function refresh() {
-        window.location.reload(false);
+    if (isCreated) {
+        return <Redirect to={`/home`} />;
     }
 
     return (
@@ -33,7 +37,7 @@ export default function PostCreate({ handlePostCreate }) {
             <label>Post:
                 <textarea type='text' name='post' value={post.post} onChange={handleChange} />
             </label>
-            <button onClick={refresh}>Submit</button>
+            <button>Submit</button>
         </form>
     </div>
     );
