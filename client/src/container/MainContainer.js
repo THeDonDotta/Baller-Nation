@@ -5,7 +5,8 @@ import { getAllComments} from '../services/comments'
 import Feed from '../components/feed'
 import Layout from '../layout/Layout'
 import PostDetail from '../screens/PostDetail'
-
+import About from '../screens/About'
+import PostCreate from '../components/PostCreate'
 function MainContainer() {
     const [posts, setPosts] = useState([])
     const [comments, setComments] = useState([])
@@ -31,14 +32,20 @@ function MainContainer() {
     const handlePostCreate = async (formData) => {
         const newPost = await postPost(formData);
         setPosts((prevState) => [...prevState, newPost]);
-        history.push('/posts');
+        history.push('/home');
     };
+    const [post, setPost] = useState({
+        post: '',
+    });
     
     return (
         <div>
             <Layout/>
             <Switch>
-                <Route path="/home">
+                <Route exact path="/home">
+                    <PostCreate 
+                    handlePostCreate = {handlePostCreate}
+                    />
                     <Feed 
                     feedposts = {posts}
                     comments = {comments}
@@ -46,6 +53,15 @@ function MainContainer() {
                 </Route>
                     <Route path='/posts/:id'>
                 <PostDetail comments={comments}  />
+                </Route>
+                <Route exact path='/about'>
+                    <About />
+                </Route>
+                {/* <Route exact path="/posts/:id/edit">
+
+                </Route> */}
+                <Route exact path="/posts/:id">
+                    <PostDetail  />
                 </Route>
             </Switch>
         </div>
