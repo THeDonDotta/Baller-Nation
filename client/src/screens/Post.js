@@ -1,8 +1,8 @@
 import React from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
-function Post({post, key}) {
+function Post({post}) {
     return (
         <div>
             <Link to= {`/posts/${post.id}`}>

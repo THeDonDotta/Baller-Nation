@@ -1,10 +1,10 @@
 import {useState, useEffect} from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { getOnePost, addComment } from '../services/post'
 
 
 function PostDetail(props) {
-    const [post, setPost] = useState(null);
+    const [post, setPost] = useState([]);
     const [isLoaded, setLoaded] = useState(false);
     const { id } = useParams();
 
@@ -17,12 +17,20 @@ function PostDetail(props) {
     }, [id]);
 
 
+
     
     return (
         <div>
             <div>
                 <h1>hi</h1>
                 <div>{post.post}</div>
+                {/* <div>{post.comments.map((c)=> (
+                    <h3>{c}</h3>
+                ))}</div> */}
+                    <Link className='edit-button' to={`/posts/${post._id}/edit`}>
+                    Update Post
+                    </Link>
+                
             </div>
         </div>
     )
