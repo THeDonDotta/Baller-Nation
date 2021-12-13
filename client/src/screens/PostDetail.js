@@ -1,9 +1,9 @@
 import {useState, useEffect} from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { getOnePost, addComment } from '../services/post'
+import { getOnePost, addComment, deletePost } from '../services/post'
 
 
-function PostDetail(props) {
+function PostDetail({handlePostDelete}) {
     const [post, setPost] = useState([]);
     const [isLoaded, setLoaded] = useState(false);
     const { id } = useParams();
@@ -27,9 +27,13 @@ function PostDetail(props) {
                 {/* <div>{post.comments.map((c)=> (
                     <h3>{c}</h3>
                 ))}</div> */}
-                    <Link className='edit-button' to={`/posts/${post._id}/edit`}>
+                    <Link className='edit-button' to={`/posts/${post.id}/edit`}>
                     Update Post
                     </Link>
+                    <button
+                    onClick={() => handlePostDelete(post.id)}>
+                    Delete
+                    </button>
                 
             </div>
         </div>

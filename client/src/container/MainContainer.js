@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react'
 import { Switch, Route, useHistory} from 'react-router-dom'
-import {getAllPosts, postPost} from '../services/post'
+import {getAllPosts, postPost, putPost, deletePost} from '../services/post'
 import { getAllComments} from '../services/comments'
 import Feed from '../components/feed'
 import Layout from '../layout/Layout'
@@ -8,7 +8,7 @@ import PostDetail from '../screens/PostDetail'
 import About from '../screens/About'
 import PostCreate from '../components/PostCreate'
 import Standings from '../screens/Standings'
-
+import EditPost from '../screens/EditPost'
 
 
 
@@ -42,6 +42,21 @@ function MainContainer() {
     const [post, setPost] = useState({
         post: '',
     });
+
+    const handlePostUpdate = async (id, formData) => {
+        const newPost = await putPost(id, formData);
+        setPosts((prevState) =>
+        prevState.map((post) => {
+            return post.id === Number(id) ? newPost : post;
+        })
+        );
+        history.push('/home');
+    };
+    
+    const handlePostDelete = async (id) => {
+        await deletePost(id);
+        setPosts((prevState) => prevState.filter((post) => post.id !== id));
+    };
     
     return (
         <div>
@@ -61,10 +76,13 @@ function MainContainer() {
                     <About />
                 </Route>
                 <Route exact path="/posts/:id/edit">
-
+                    <EditPost
+                    posts = {posts}
+                    handlePostUpdate = {handlePostUpdate}
+                    />
                 </Route>
                 <Route exact path="/posts/:id">
-                    <PostDetail  />
+                    <PostDetail  handlePostDelete = {handlePostDelete}/>
                 </Route> 
                 <Route exact path="/standings">
                     <Standings />
