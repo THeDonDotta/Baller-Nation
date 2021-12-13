@@ -67,6 +67,7 @@ function MainContainer() {
                     feedposts = {posts}
                     comments = {comments}
                     handlePostCreate = {handlePostCreate}
+                    handlePostDelete= {handlePostDelete}
                     />
                 </Route>
                     <Route path='/posts/:id'>

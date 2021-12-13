@@ -27,13 +27,7 @@ function PostDetail({handlePostDelete}) {
                 {/* <div>{post.comments.map((c)=> (
                     <h3>{c}</h3>
                 ))}</div> */}
-                    <Link className='edit-button' to={`/posts/${post.id}/edit`}>
-                    Update Post
-                    </Link>
-                    <button
-                    onClick={() => handlePostDelete(post.id)}>
-                    Delete
-                    </button>
+
                 
             </div>
         </div>

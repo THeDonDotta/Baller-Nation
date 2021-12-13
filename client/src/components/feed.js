@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom'
 import Post from '../screens/Post'
 
 
-function Feed({feedposts, comments, handlePostCreate}) {
+function Feed({feedposts, comments, handlePostCreate, handlePostDelete}) {
 
     return (
         <div>
@@ -20,7 +20,15 @@ function Feed({feedposts, comments, handlePostCreate}) {
                     post={post}
                     key={index}
                     />
-                </div>            
+                    <Link className='edit-button' to={`/posts/${post.id}/edit`}>
+                    Checkout the Post
+                    </Link>
+                    <button
+                    onClick={() => handlePostDelete(post.id)}>
+                    Delete
+                    </button>
+                </div> 
+                
             ))}
 
         </div>
