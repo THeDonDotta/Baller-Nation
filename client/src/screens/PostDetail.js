@@ -28,7 +28,9 @@ function PostDetail({handlePostDelete}) {
                     <h3>{c}</h3>
                 ))}</div> */}
 
-                
+                <Link className='edit-button' to={`/posts/${post.id}/edit`}>
+                    Checkout the Post
+                </Link> 
             </div>
         </div>
     )

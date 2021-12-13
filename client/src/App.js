@@ -5,7 +5,7 @@ import MainContainer from './container/MainContainer'
 import Layout from './layout/Layout'
 function App() {
   return (
-    <div className="App">
+    <div className="App" >
       <Layout>
         <Switch >
           <Route path="/">

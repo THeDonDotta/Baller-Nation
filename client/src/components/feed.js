@@ -4,12 +4,13 @@ import React from 'react'
 import PostCreate from './PostCreate';
 import {Link} from 'react-router-dom'
 import Post from '../screens/Post'
-
+import HomeBanner from './homeBanner';
 
 function Feed({feedposts, comments, handlePostCreate, handlePostDelete}) {
 
     return (
         <div>
+            <HomeBanner />
             <PostCreate
                 handlePostCreate={handlePostCreate}
             />

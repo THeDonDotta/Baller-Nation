@@ -31,7 +31,7 @@ function EditPost({posts, handlePostUpdate}) {
             <h3>Edit Post</h3>
             <label>
                 Update post
-                <input type='text' name='name' value={post} onChange={handleChange} />
+                <input type='textarea' name='name' value={post} onChange={handleChange} />
             </label>
             <button>Submit</button>
         </form> 
