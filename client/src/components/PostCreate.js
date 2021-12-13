@@ -8,7 +8,6 @@ export default function PostCreate({ handlePostCreate }) {
     post: "",
     });
 
-    const [isCreated, setCreated] = useState(false)
 
     const handleChange = (e) => {
     const { post, value } = e.target;
@@ -21,10 +20,10 @@ export default function PostCreate({ handlePostCreate }) {
     const handleSubmit = async (event) => {
         event.preventDefault();
         const created = await postPost(post);
-        setCreated({ created });
+        
     };
-    if (isCreated) {
-        return <Redirect to={`/home`} />;
+    function refresh() {
+        window.location.reload(false);
     }
 
     return (
@@ -34,7 +33,7 @@ export default function PostCreate({ handlePostCreate }) {
             <label>Post:
                 <textarea type='text' name='post' value={post.post} onChange={handleChange} />
             </label>
-            <button>Submit</button>
+            <button onClick={refresh}>Submit</button>
         </form>
     </div>
     );
