@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import {postPost} from '../services/post'
-import { Redirect } from 'react-router-dom'
+import { Redirect, useHistory } from 'react-router-dom'
 import Post from '../screens/Post';
 
-export default function PostCreate({ handlePostCreate }) {
+export default function PostCreate({handlePostCreate}) {
     
     const [post, setPost] = useState({
     post: "",
@@ -11,7 +11,7 @@ export default function PostCreate({ handlePostCreate }) {
     });
 
     const [isCreated, setCreated] = useState(false)
-
+    const history = useHistory()
     const handleChange = (e) => {
     const { name, value } = e.target;
         setPost((prevState) => ({
@@ -33,7 +33,7 @@ export default function PostCreate({ handlePostCreate }) {
     return (
         <div>
             <h3>Create Post</h3>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={(e)=>{e.preventDefault(); handlePostCreate(post)}}>
             <label>Post:
                 <textarea type='text' name='post' value={post.post} onChange={handleChange} />
             </label>

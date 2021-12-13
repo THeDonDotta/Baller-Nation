@@ -1,9 +1,10 @@
 import React from 'react'
 import Nav from '../components/nav'
-function Layout() {
+function Layout(props) {
     return (
         <div>
-            <Nav /> 
+            <Nav />
+            {props.children}
         </div>
     )
 }

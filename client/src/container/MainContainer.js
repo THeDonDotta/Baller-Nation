@@ -7,6 +7,11 @@ import Layout from '../layout/Layout'
 import PostDetail from '../screens/PostDetail'
 import About from '../screens/About'
 import PostCreate from '../components/PostCreate'
+import Standings from '../screens/Standings'
+
+
+
+
 function MainContainer() {
     const [posts, setPosts] = useState([])
     const [comments, setComments] = useState([])
@@ -40,12 +45,13 @@ function MainContainer() {
     
     return (
         <div>
-            <Layout/>
+            
             <Switch>
                 <Route exact path="/home">
                     <Feed 
                     feedposts = {posts}
                     comments = {comments}
+                    handlePostCreate = {handlePostCreate}
                     />
                 </Route>
                     <Route path='/posts/:id'>
@@ -54,11 +60,14 @@ function MainContainer() {
                 <Route exact path='/about'>
                     <About />
                 </Route>
-                {/* <Route exact path="/posts/:id/edit">
+                <Route exact path="/posts/:id/edit">
 
-                </Route> */}
+                </Route>
                 <Route exact path="/posts/:id">
                     <PostDetail  />
+                </Route> 
+                <Route exact path="/standings">
+                    <Standings />
                 </Route>
             </Switch>
         </div>

@@ -6,18 +6,15 @@ import {Link} from 'react-router-dom'
 import Post from '../screens/Post'
 
 
-function Feed({feedposts, comments}) {
+function Feed({feedposts, comments, handlePostCreate}) {
 
     return (
         <div>
-            <PostCreate/>
+            <PostCreate
+                handlePostCreate={handlePostCreate}
+            />
             {feedposts?.map((post, index) => (
-                // <div key={post.id}>
-                // // <Link to={`posts/:${post.id}`}>
-                // // <p>{post.post}</p>
-                // // </Link>
 
-                // </div>  
                 <div>
                     <Post
                     post={post}
