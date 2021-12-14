@@ -9,6 +9,7 @@ import About from "../screens/About";
 import PostCreate from "../components/PostCreate";
 import Standings from "../screens/Standings";
 import EditPost from "../screens/EditPost";
+import Highlight from '../screens/Highlight'
 
 function MainContainer() {
   const [posts, setPosts] = useState([]);
@@ -75,6 +76,9 @@ function MainContainer() {
         </Route>
         <Route exact path="/posts/:id">
           <PostDetail handlePostDelete={handlePostDelete} />
+        </Route>
+        <Route exact path='/highlight'>
+          <Highlight />
         </Route>
         <Route exact path="/standings">
           <Standings />

@@ -24,9 +24,9 @@ function PostDetail({handlePostDelete}) {
             <div>
             
                 <div>{post.post}</div>
-                {/* <div>{post.comments.map((c)=> (
+                <div>{post.comments?.map((c)=> (
                     <h3>{c}</h3>
-                ))}</div> */}
+                ))}</div>
 
                 <Link className='edit-button' to={`/posts/${post.id}/edit`}>
                     <Button variant="contained">
