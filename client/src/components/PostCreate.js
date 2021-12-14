@@ -38,7 +38,7 @@ export default function PostCreate({handlePostCreate}) {
             <h3>Take your shot below: </h3>
         <form onSubmit={(e)=>{e.preventDefault(); handlePostCreate(post)}}>
             <label className='post-textarea'>
-                <textarea type='text' name='post' value={post.post} onChange={handleChange} />
+                <textarea type='text' name='post' rows='6' cols='30'value={post.post} onChange={handleChange} />
             </label>
             <button className='submit-post'><Button>Submit</Button></button>
         </form>
