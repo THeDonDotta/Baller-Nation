@@ -75,7 +75,8 @@ function MainContainer() {
           <EditPost posts={posts} handlePostUpdate={handlePostUpdate} />
         </Route>
         <Route exact path="/posts/:id">
-          <PostDetail handlePostDelete={handlePostDelete} />
+          <PostDetail handlePostDelete={handlePostDelete} 
+          />
         </Route>
         <Route exact path='/highlight'>
           <Highlight />
