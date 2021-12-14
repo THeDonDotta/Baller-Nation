@@ -23,7 +23,7 @@ function Feed({feedposts, comments, handlePostCreate, handlePostDelete}) {
                     post={post}
                     key={index}
                     />
-                    <Link className='edit-button' to={`/posts/${post.id}/edit`}>
+                    <Link className='edit-button' to={`/posts/${post.id}`}>
                     <Button variant="contained">Checkout the Post</Button>
                     </Link>
                     <Button variant="contained"

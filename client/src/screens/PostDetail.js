@@ -22,7 +22,7 @@ function PostDetail({handlePostDelete}) {
     return (
         <div>
             <div>
-                <h1>hi</h1>
+            
                 <div>{post.post}</div>
                 {/* <div>{post.comments.map((c)=> (
                     <h3>{c}</h3>
@@ -30,7 +30,7 @@ function PostDetail({handlePostDelete}) {
 
                 <Link className='edit-button' to={`/posts/${post.id}/edit`}>
                     <Button variant="contained">
-                    Checkout the Post
+                    Update Post
                     </Button>
                 </Link> 
             </div>
