@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom'
 import Post from '../screens/Post'
 import HomeBanner from './homeBanner';
 import { Card, Button } from '@mui/material'
-
+import '../assets/feed.css'
 function Feed({feedposts, comments, handlePostCreate, handlePostDelete}) {
 
     return (
@@ -18,13 +18,13 @@ function Feed({feedposts, comments, handlePostCreate, handlePostDelete}) {
             
             {feedposts?.map((post, index) => (
 
-                <div>
+                <div className="postdiv">
                     <Post
                     post={post}
                     key={index}
                     />
                     <Link className='edit-button' to={`/posts/${post.id}`}>
-                    <Button variant="contained">Checkout the Post</Button>
+                    <Button className='checkout' variant="contained">Checkout the Post</Button>
                     </Link>
                     <Button variant="contained"
                     onClick={() => handlePostDelete(post.id)}>
