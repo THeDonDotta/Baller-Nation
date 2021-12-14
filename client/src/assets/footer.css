@@ -1,4 +1,12 @@
 .repo-link{
     width: 170px;
     height: 100px; 
+    margin: auto;
+}
+.footer{
+    display: block;
+    padding-top:50px;
+    height: 60px;
+
+
 }

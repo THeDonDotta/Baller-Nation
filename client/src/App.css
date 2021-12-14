@@ -1,7 +1,9 @@
 .App {
   text-align: center;
-  background: url(https://i.imgur.com/VDy1KTY.jpg)
-
+  background: url(https://i.imgur.com/VDy1KTY.jpg);
+  color: white;
+  background-size: cover;
+  height: 100vh;
 }
 
 

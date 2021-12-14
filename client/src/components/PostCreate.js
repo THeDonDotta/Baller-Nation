@@ -2,6 +2,8 @@ import { useState } from 'react';
 import {postPost} from '../services/post'
 import { Redirect, useHistory } from 'react-router-dom'
 import Post from '../screens/Post';
+import TextField from '@mui/material/TextField'
+import { Card, Button } from '@mui/material'
 
 export default function PostCreate({handlePostCreate}) {
     
@@ -32,12 +34,12 @@ export default function PostCreate({handlePostCreate}) {
 
     return (
         <div>
-            <h3>Create Post</h3>
+            <h3>Take your shot below: </h3>
         <form onSubmit={(e)=>{e.preventDefault(); handlePostCreate(post)}}>
-            <label>Post:
+            <label>
                 <textarea type='text' name='post' value={post.post} onChange={handleChange} />
             </label>
-            <button>Submit</button>
+            <button><Button>Submit</Button></button>
         </form>
     </div>
     );

@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 
+
 function EditPost({posts, handlePostUpdate}) {
 
     const [formData, setFormData] = useState({
@@ -9,6 +10,14 @@ function EditPost({posts, handlePostUpdate}) {
     });
     const { post } = FormData
     const { id } = useParams();
+
+    // useEffect(() => {
+    //     const prefillFormData = () => {
+    //         const postItem = posts.find((post) => post.id === Number(id));
+    //         setFormData({ name: foodItem.name });
+    //     };
+    //     if (foods.length) prefillFormData();
+    // }, [foods, id]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;

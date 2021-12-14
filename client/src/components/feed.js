@@ -5,6 +5,7 @@ import PostCreate from './PostCreate';
 import {Link} from 'react-router-dom'
 import Post from '../screens/Post'
 import HomeBanner from './homeBanner';
+import { Card, Button } from '@mui/material'
 
 function Feed({feedposts, comments, handlePostCreate, handlePostDelete}) {
 
@@ -14,6 +15,7 @@ function Feed({feedposts, comments, handlePostCreate, handlePostDelete}) {
             <PostCreate
                 handlePostCreate={handlePostCreate}
             />
+            
             {feedposts?.map((post, index) => (
 
                 <div>
@@ -22,15 +24,17 @@ function Feed({feedposts, comments, handlePostCreate, handlePostDelete}) {
                     key={index}
                     />
                     <Link className='edit-button' to={`/posts/${post.id}/edit`}>
-                    Checkout the Post
+                    <Button variant="contained">Checkout the Post</Button>
                     </Link>
-                    <button
+                    <Button variant="contained"
                     onClick={() => handlePostDelete(post.id)}>
                     Delete
-                    </button>
+                    </Button>
+                
                 </div> 
                 
             ))}
+
 
         </div>
     )

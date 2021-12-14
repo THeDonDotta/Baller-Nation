@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { getOnePost, addComment, deletePost } from '../services/post'
-
+import { Card, Button } from '@mui/material'
 
 function PostDetail({handlePostDelete}) {
     const [post, setPost] = useState([]);
@@ -29,7 +29,9 @@ function PostDetail({handlePostDelete}) {
                 ))}</div> */}
 
                 <Link className='edit-button' to={`/posts/${post.id}/edit`}>
+                    <Button variant="contained">
                     Checkout the Post
+                    </Button>
                 </Link> 
             </div>
         </div>
