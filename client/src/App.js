@@ -3,6 +3,9 @@ import './App.css';
 import Home from './screens/Home'
 import MainContainer from './container/MainContainer'
 import Layout from './layout/Layout'
+import Landing from './screens/Landing'
+
+
 function App() {
   return (
     <div className="App" >
