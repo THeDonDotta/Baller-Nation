@@ -4,6 +4,7 @@ import { Redirect, useHistory } from 'react-router-dom'
 import Post from '../screens/Post';
 import TextField from '@mui/material/TextField'
 import { Card, Button } from '@mui/material'
+import '../assets/postCreate.css'
 
 export default function PostCreate({handlePostCreate}) {
     
@@ -36,10 +37,10 @@ export default function PostCreate({handlePostCreate}) {
         <div>
             <h3>Take your shot below: </h3>
         <form onSubmit={(e)=>{e.preventDefault(); handlePostCreate(post)}}>
-            <label>
+            <label className='post-textarea'>
                 <textarea type='text' name='post' value={post.post} onChange={handleChange} />
             </label>
-            <button><Button>Submit</Button></button>
+            <button className='submit-post'><Button>Submit</Button></button>
         </form>
     </div>
     );
