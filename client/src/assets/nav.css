@@ -1,0 +1,8 @@
+.nav{
+  display: flex;
+  justify-content: center;
+
+}
+.nav-links{
+  justify-content: space-around;
+}
