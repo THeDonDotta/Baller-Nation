@@ -7,6 +7,12 @@
   font-size: 70px;
 }
 
+@media screen and (max-width:1024){
+  .banner-image{
+    padding-top: 20px;
+  }
+}
+
 @media screen and (max-width:500px){
 
   .banner-image{

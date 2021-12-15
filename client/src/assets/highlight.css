@@ -16,12 +16,7 @@
   display: none;
 }
 
-@media screen and (max-width:970){
-  .player-media{
-    width: 100px;
-    height: 1000px;
-  }
-}
+
 
 @media screen and (max-width:1140px){
   .player-media{
