@@ -1,13 +1,13 @@
 import {useState, useEffect} from 'react'
 import { useParams, Link, useHistory } from 'react-router-dom'
-import { getOnePost, addComment, deletePost } from '../services/post'
+import { getOnePost, deletePost } from '../services/post'
+import { getAllComments, postComment } from '../services/comments'
 import { Card, Button } from '@mui/material'
 
-function PostDetail({handlePostDelete}) {
+function PostDetail({handlePostDelete, handleCommentCreate}) {
     const [post, setPost] = useState([]);
     const [isLoaded, setLoaded] = useState(false);
     const { id } = useParams();
-    const [comments, setComments] = useState([]);
     const [formData, setFormData] =useState({
         comment: '',
     })
@@ -24,11 +24,11 @@ function PostDetail({handlePostDelete}) {
         fetchPost();
     }, [id]);
 
-    const handleCommentCreate = async (formData) => {
-        const newComment = await addComment(formData);
-        setComments((prevState) => [...prevState, newComment]);
-        history.push(`/posts/${post.id}`);
-    };
+    // const handleCommentCreate = async (formData) => {
+    //     const newComment = await postComment(formData);
+    //     setComments((prevState) => [...prevState, newComment]);
+    //     history.push(`/posts/${post.id}`);
+    // };
 
     const handleChange = (e) => {
         const { name, value } = e.target;
