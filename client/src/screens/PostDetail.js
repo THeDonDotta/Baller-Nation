@@ -42,7 +42,7 @@ function PostDetail({handlePostDelete, handleCommentCreate}) {
         <div>
             <div>
             
-                <div>{post.post}</div>
+                <h1 className="detail-post" >{post.post}</h1>
                 <div>{post.comments?.map((c)=> (
                     <h3>{c.comment}</h3>
                 ))}</div>
