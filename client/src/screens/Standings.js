@@ -4,8 +4,12 @@ function Standings() {
     return (
         <div>
             <h1 className="standings-title">Current Standings</h1>
-            <img src="https://i.imgur.com/QNgHxlr.png" title="source: imgur.com" />
-            <img src="https://i.imgur.com/AfiNiBB.png" title="source: imgur.com" />
+            <img className="eastern" src="https://i.imgur.com/QNgHxlr.png" title="source: imgur.com" />
+            <img className="western" src="https://i.imgur.com/AfiNiBB.png" title="source: imgur.com" />
+            <div>
+                <img className="eastern-media" src="https://i.imgur.com/KaLUaCj.png" title="source: imgur.com" />
+                <img className="western-media" src="https://i.imgur.com/X41Pznr.png" title="source: imgur.com" />
+            </div>
         </div>
     )
 }

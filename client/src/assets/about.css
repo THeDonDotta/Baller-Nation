@@ -1,8 +1,4 @@
-.creative{
-  padding-top: 30px;
-  width: 200px;
-  height:200px;
-}
+
 
 .about-title{
   padding-bottom: 30px;
@@ -21,4 +17,18 @@
 
 .about-details{
   font-size: 30px;
+}
+
+@media screen and (max-width:500px){
+
+  .about-title{
+    font-size: 70px;
+  }
+
+  .nba-logo{
+    width: 280px;
+    height: 300px;
+  }
+
+  
 }

@@ -3,3 +3,29 @@
   padding-bottom:30px;
   font-size: 40px;
 }
+.eastern-media{
+  display: none;
+}
+.western-media{
+  display: none;
+}
+
+@media screen and (max-width:800px){
+
+  .eastern{
+    display:none;
+  }
+  .western{
+    display:none;
+  }
+  .eastern-media{
+    display:inline;
+    width: 250px;
+    height:450px;
+  }
+  .western-media{
+    display:inline;
+    width: 250px;
+    height:450px;
+  }
+}

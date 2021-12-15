@@ -9,14 +9,19 @@ Comment.destroy_all
 Post.destroy_all
 
 
-Post.create!(post: 'The 76ers are the best team in the league', image:'https://imgur.com/MOP5vwM')
-Post.create!(post: 'boom', image:'https://imgur.com/MOP5vwM')
-Post.create!(post: 'Ja is the best', image:'https://imgur.com/MOP5vwM')
-Post.create!(post: 'Bing Bong', image:'https://imgur.com/MOP5vwM')
+@post1= Post.create!(post: 'The 76ers are the best team in the league', image:'https://imgur.com/MOP5vwM')
+@post2= Post.create!(post: 'boom', image:'https://imgur.com/MOP5vwM')
+@post3= Post.create!(post: 'Ja is the best', image:'https://imgur.com/MOP5vwM')
+@post4= Post.create!(post: 'Bing Bong', image:'https://imgur.com/MOP5vwM')
 
-# 10.times do 
-#     Comment.create!(:post_id: 1, comment: Faker::Lorem.unique)
-# end
 
-Comment.create!(post: Post.last, comment: 'test' )
+
+Comment.create!(post: @post1, comment: 'agreed' )
+Comment.create!(post: @post1, comment: 'You are a wise man sir' )
+Comment.create!(post: @post2, comment: 'what are you talking about' )
+Comment.create!(post: @post2, comment: 'BadaBing BadaBoom' )
+Comment.create!(post: @post3, comment: 'lets go!' )
+Comment.create!(post: @post3, comment: 'you right you right' )
+Comment.create!(post: @post4, comment: 'ballislife' )
+Comment.create!(post: @post4, comment: 'NEW YORK KNICKS BABY!!')
 
