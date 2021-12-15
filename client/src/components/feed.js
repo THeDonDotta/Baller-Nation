@@ -26,7 +26,7 @@ function Feed({feedposts, comments, handlePostCreate, handlePostDelete}) {
                     <Link className='edit-button' to={`/posts/${post.id}`}>
                     <Button className='checkout' variant="contained">Checkout the Post</Button>
                     </Link>
-                    <Button variant="contained"
+                    <Button className= "delete" variant="contained"
                     onClick={() => handlePostDelete(post.id)}>
                     Delete
                     </Button>

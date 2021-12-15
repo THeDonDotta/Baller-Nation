@@ -8,3 +8,14 @@
   justify-content: center;
   padding-top: 30px;
 }
+
+@media screen and (max-width:500px){
+.post-text{
+  font-size: 20px;
+  width: 200px;
+
+}
+.post{
+  padding-left: 90px;
+}
+}

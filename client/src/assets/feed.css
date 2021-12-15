@@ -2,3 +2,14 @@
   padding-top: 30px;
   padding-right: 100px;
 }
+
+@media screen and (max-width:500px){
+
+  .edit-button {
+    padding-left: 60px;
+    
+  }
+  .delete{
+    padding-left: 60px;
+  }
+}

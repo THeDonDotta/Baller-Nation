@@ -6,7 +6,7 @@ function HomeBanner() {
 
       <h1 className= 'homeBanner-title'>BALLER-NATION</h1>
 
-      <img src="https://i.imgur.com/vA6P1s4.png" title="source: imgur.com" />
+      <img className="banner-image"src="https://i.imgur.com/vA6P1s4.png" title="source: imgur.com" />
     </div>
   )
 }

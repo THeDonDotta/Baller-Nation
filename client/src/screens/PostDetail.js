@@ -19,7 +19,7 @@ function PostDetail({handlePostDelete, handleCommentCreate}) {
         const fetchPost = async () => {
         const currentPost = await getOnePost(id);
         console.log(post)
-        setPost(post);
+        setPost(currentPost);
     };
         fetchPost();
     }, [id]);

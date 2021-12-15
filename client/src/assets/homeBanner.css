@@ -6,3 +6,11 @@
 .homeBanner-title{
   font-size: 70px;
 }
+
+@media screen and (max-width:500px){
+
+  .banner-image{
+    display: none;
+  }
+
+}
