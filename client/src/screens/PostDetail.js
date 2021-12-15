@@ -3,6 +3,7 @@ import { useParams, Link, useHistory } from 'react-router-dom'
 import { getOnePost, deletePost } from '../services/post'
 import { getAllComments, postComment } from '../services/comments'
 import { Card, Button } from '@mui/material'
+import '../assets/postDetail.css'
 
 function PostDetail({handlePostDelete, handleCommentCreate}) {
     const [post, setPost] = useState([]);
@@ -58,10 +59,10 @@ function PostDetail({handlePostDelete, handleCommentCreate}) {
                 handleCommentCreate(formData);
                 }}
             >
-            <h3>Add a comment</h3>
+            <h3 className="add-comment-title">Add a comment</h3>
                 <label>
                     comment here
-                <input type='text' name='comment' value= {comment} onChange={handleChange} />
+                <input type='textarea' name='comment' value= {comment} onChange={handleChange} />
                 </label>
                 <button>Submit</button>
             </form>
