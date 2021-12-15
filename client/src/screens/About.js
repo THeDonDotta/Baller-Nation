@@ -7,7 +7,7 @@ function About() {
             <h1 className="about-title">BALLER-NATION</h1>
             <h4 className="about-description">Where intellegent ballers collaborate</h4>
             <div >
-            <img classname="creative" src="https://i.imgur.com/2qVSzql.png" />
+            {/* <img classname="creative" src="https://i.imgur.com/2qVSzql.png" /> */}
             <img className="nba-logo" src="https://i.imgur.com/si7hhZc.jpg" title="source: imgur.com" />
             </div>
 
