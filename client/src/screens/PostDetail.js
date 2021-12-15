@@ -43,12 +43,12 @@ function PostDetail({handlePostDelete, handleCommentCreate}) {
             <div>
             
                 <h1 className="detail-post" >{post.post}</h1>
-                <div>{post.comments?.map((c)=> (
-                    <h3>{c.comment}</h3>
+                <div className="b-comment">{post.comments?.map((c)=> (
+                    <h3 className="comment-detail" >{c.comment}</h3>
                 ))}</div>
 
-                <Link className='edit-button' to={`/posts/${post.id}/edit`}>
-                    <Button variant="contained">
+                <Link to={`/posts/${post.id}/edit`}>
+                    <Button className='update'variant="contained">
                     Update Post
                     </Button>
                 </Link> 

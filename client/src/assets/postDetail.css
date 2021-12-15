@@ -2,9 +2,23 @@
   font-size: 60px;
   padding-top: 20px;
   padding-bottom: 30px;
+
 }
 
 .add-comment-title {
   padding-top: 20px;
   font-size: 20px;
+}
+.comment-detail{
+  font-size:30px;
+  border-bottom: 3px solid white;
+}
+.b-comment{
+  border: 5px solid white;
+  width: 400px;
+  margin: auto;
+  
+}
+.update{
+  padding-top: 20px;
 }
