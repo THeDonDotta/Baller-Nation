@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Switch, Route, useHistory } from "react-router-dom";
 import { getAllPosts, postPost, putPost, deletePost } from "../services/post";
-import { getAllComments } from "../services/comments";
+import { getAllComments, postComment } from "../services/comments";
 import Feed from "../components/feed";
 import Layout from "../layout/Layout";
 import PostDetail from "../screens/PostDetail";
@@ -27,8 +27,8 @@ function MainContainer() {
 
   useEffect(() => {
     const fetchComments = async () => {
-      const postcomment = await getAllComments();
-      setComments(postcomment);
+      const getComment = await getAllComments();
+      setComments(getComment);
     };
     fetchComments();
   }, []);
@@ -42,6 +42,13 @@ function MainContainer() {
     post: "",
   });
 
+  const handleCommentCreate = async (id, contentData) => {
+
+    const newComment = await postComment(id, contentData);
+    setComments((prevState) => [...prevState, newComment]);
+    history.push(`/posts/${id}/comments`)
+  }
+
   const handlePostUpdate = async (id, formData) => {
     const newPost = await putPost(id, formData);
     setPosts((prevState) =>
@@ -51,6 +58,8 @@ function MainContainer() {
     );
     history.push("/home");
   };
+
+
 
   const handlePostDelete = async (id) => {
     await deletePost(id);
@@ -63,7 +72,7 @@ function MainContainer() {
         <Route exact path="/home">
           <Feed
             feedposts={posts}
-            comments={comments}
+            // comments={comments}
             handlePostCreate={handlePostCreate}
             handlePostDelete={handlePostDelete}
           />
@@ -75,7 +84,10 @@ function MainContainer() {
           <EditPost posts={posts} handlePostUpdate={handlePostUpdate} />
         </Route>
         <Route exact path="/posts/:id">
-          <PostDetail handlePostDelete={handlePostDelete} 
+          <PostDetail 
+          handleCommentCreate={handleCommentCreate}
+          handlePostDelete={handlePostDelete} 
+
           />
         </Route>
         <Route exact path='/highlight'>

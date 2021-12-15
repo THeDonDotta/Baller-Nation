@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Graduate&family=Roboto+Mono:ital,wght@1,500&display=swap');
+
 .App {
   text-align: center;
   background: url(https://i.imgur.com/VDy1KTY.jpg);
   color: white;
   background-size: cover;
   height: 100%;
+  overflow: hidden;
+  font-family: 'Graduate', cursive;
 }
 
 

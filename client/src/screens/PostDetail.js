@@ -1,13 +1,14 @@
 import {useState, useEffect} from 'react'
 import { useParams, Link, useHistory } from 'react-router-dom'
-import { getOnePost, addComment, deletePost } from '../services/post'
+import { getOnePost, deletePost } from '../services/post'
+import { getAllComments, postComment } from '../services/comments'
 import { Card, Button } from '@mui/material'
+import '../assets/postDetail.css'
 
-function PostDetail({handlePostDelete}) {
+function PostDetail({handlePostDelete, handleCommentCreate}) {
     const [post, setPost] = useState([]);
     const [isLoaded, setLoaded] = useState(false);
     const { id } = useParams();
-    const [comments, setComments] = useState([]);
     const [formData, setFormData] =useState({
         comment: '',
     })
@@ -24,11 +25,11 @@ function PostDetail({handlePostDelete}) {
         fetchPost();
     }, [id]);
 
-    const handleCommentCreate = async (formData) => {
-        const newComment = await addComment(formData);
-        setComments((prevState) => [...prevState, newComment]);
-        history.push(`/posts/${post.id}`);
-    };
+    // const handleCommentCreate = async (formData) => {
+    //     const newComment = await postComment(formData);
+    //     setComments((prevState) => [...prevState, newComment]);
+    //     history.push(`/posts/${post.id}`);
+    // };
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -42,7 +43,7 @@ function PostDetail({handlePostDelete}) {
         <div>
             <div>
             
-                <div>{post.post}</div>
+                <h1 className="detail-post" >{post.post}</h1>
                 <div>{post.comments?.map((c)=> (
                     <h3>{c.comment}</h3>
                 ))}</div>
@@ -58,10 +59,10 @@ function PostDetail({handlePostDelete}) {
                 handleCommentCreate(formData);
                 }}
             >
-            <h3>Add a comment</h3>
+            <h3 className="add-comment-title">Add a comment</h3>
                 <label>
                     comment here
-                <input type='text' name='comment' value= {comment} onChange={handleChange} />
+                <input type='textarea' name='comment' value= {comment} onChange={handleChange} />
                 </label>
                 <button>Submit</button>
             </form>

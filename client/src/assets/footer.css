@@ -2,11 +2,12 @@
     width: 170px;
     height: 100px; 
     margin: auto;
+    padding-bottom: 30px;
 }
 .footer{
     display: block;
-    padding-top:50px;
+    padding-top:70px;
     height: 60px;
-
+    padding-bottom: 30px;
 
 }

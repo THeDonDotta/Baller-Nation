@@ -1,4 +1,8 @@
 .homeBanner {
   padding-top: 30px;
   padding-bottom: 20px;
+  color: white;
+}
+.homeBanner-title{
+  font-size: 70px;
 }
