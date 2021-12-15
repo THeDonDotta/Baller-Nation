@@ -15,11 +15,10 @@ function PostDetail({handlePostDelete, handleCommentCreate}) {
     const {comment} = formData;
     const history = useHistory();
 
-    console.log(post)
-    console.log(post.comments)
     useEffect(() => {
         const fetchPost = async () => {
-        const post = await getOnePost(id);
+        const currentPost = await getOnePost(id);
+        console.log(post)
         setPost(post);
     };
         fetchPost();
