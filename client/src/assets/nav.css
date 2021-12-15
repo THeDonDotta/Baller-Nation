@@ -6,3 +6,11 @@
 .nav-links{
   justify-content: space-around;
 }
+
+@media screen and (max-width:500px){
+  .nav-links{
+    display: flex;
+    flex-direction: column;
+  }
+
+}
