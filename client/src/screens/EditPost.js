@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import '../assets/editpost.css'
 
 function EditPost({ posts, handlePostUpdate }) {
   const [formData, setFormData] = useState({
@@ -26,6 +27,7 @@ function EditPost({ posts, handlePostUpdate }) {
   };
 
   return (
+    <div>
     <form
       onSubmit={(e) => {
         e.preventDefault();
@@ -51,7 +53,10 @@ function EditPost({ posts, handlePostUpdate }) {
         /> */}
       </label>
       <button>Submit</button>
-    </form>
+      
+      </form>
+    <img className='update-image' src="https://i.imgur.com/NM1hb80.jpg" title="source: imgur.com" />
+    </div>
   );
 }
 
