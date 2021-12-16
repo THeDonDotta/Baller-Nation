@@ -102,7 +102,7 @@ src
 | ------------------- | :------: | :------------: | :-----------: | 
 | Create CRUD Actions |    H     |     10 hrs      |     10 hrs     |   
 | styling             |   M      |      5 hrs    |     12 hrs      |
-| TOTAL               |          |     23 hrs      |     22  hrs     | 
+| TOTAL               |          |     15 hrs      |     22  hrs     | 
 
 
 
