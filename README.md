@@ -135,4 +135,5 @@ src
 
 ## Code Issues & Resolutions
 
-> Use this section to list of all major issues encountered and their resolution.
+- ran into problems and on with short amount of time I decided to switch up my app layout and change functionality. 
+- was not able to get add a comment to work correctly
