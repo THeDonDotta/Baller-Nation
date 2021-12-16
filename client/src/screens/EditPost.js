@@ -35,18 +35,20 @@ function EditPost({ posts, handlePostUpdate }) {
       <h3>Edit Post</h3>
       <label>
         Update post
-        <input
-          type="textarea"
+        <textarea
+          type="text"
           name="post"
+          rows='6' 
+          cols='30'
           value={post}
           onChange={handleChange}
         />
-        <input
+        {/* <input
           type="text"
           name="image"
           value={image}
           onChange={handleChange}
-        />
+        /> */}
       </label>
       <button>Submit</button>
     </form>
