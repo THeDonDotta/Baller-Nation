@@ -130,7 +130,18 @@ src
 
 ## Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+```
+        <div>
+            <h3>Take your shot below: </h3>
+        <form onSubmit={(e)=>{e.preventDefault(); handlePostCreate(post)}}>
+            <label className='post-textarea'>
+                <textarea type='text' name='post' rows='6' cols='30'value={post.post} onChange={handleChange} />
+            </label>
+            <button className='submit-post'><Button>Submit</Button></button>
+        </form>
+    </div>
+    
+```
 
 ## Code Issues & Resolutions
 
