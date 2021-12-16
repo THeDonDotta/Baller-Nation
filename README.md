@@ -46,7 +46,6 @@ _**Baller Nation** this app is built for sports fans. It is a forum that provide
 | :--------------: | :----------------------------------------- |
 |      React       | Front end |
 |   Material UI    | for styling |
-|   rapidAPI  | 3rd party api for NBA data |
 |   Ruby on rails  | backend |
 
 <br>
@@ -101,10 +100,9 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | 
 | ------------------- | :------: | :------------: | :-----------: | 
-| Add game scores/standings   |    M     |     8 hrs      |     NA hrs     |  
-| Create CRUD Actions |    H     |     10 hrs      |     NA hrs     |   
-| styling             |   M      |      5 hrs    |     NA hrs      |
-| TOTAL               |          |     23 hrs      |     NA hrs     | 
+| Create CRUD Actions |    H     |     10 hrs      |     10 hrs     |   
+| styling             |   M      |      5 hrs    |     12 hrs      |
+| TOTAL               |          |     23 hrs      |     22  hrs     | 
 
 
 
@@ -126,6 +124,7 @@ src
 - add individual sections for each team
 - add ability to use pictures and videos in posts on the feed
 - add detailed stats of league leaders
+- add NBA API
 
 ***
 
